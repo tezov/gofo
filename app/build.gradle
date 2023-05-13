@@ -1,0 +1,170 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.tezov.application'
+}
+
+android {
+    compileSdkVersion 32
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion 21
+        targetSdkVersion 32
+        resConfigs "en", "fr"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+//    signingConfigs {
+//        releaseConfig {
+//            def keystoreReleaseProperties = new Properties()
+//            keystoreReleaseProperties.load(new FileInputStream(file("keyStoreRelease.properties")))
+//            storeFile file(keystoreReleaseProperties.storeFile)
+//            storePassword keystoreReleaseProperties.storePassword
+//            keyAlias keystoreReleaseProperties.keyAlias
+//            keyPassword keystoreReleaseProperties.keyPassword
+//        }
+//        debugConfig {
+//            def keystoreDebugProperties = new Properties()
+//            keystoreDebugProperties.load(new FileInputStream(file("keyStoreDebug.properties")))
+//            storeFile file(keystoreDebugProperties.storeFile)
+//            storePassword keystoreDebugProperties.storePassword
+//            keyAlias keystoreDebugProperties.keyAlias
+//            keyPassword keystoreDebugProperties.keyPassword
+//        }
+//    }
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+//            signingConfig signingConfigs.releaseConfig
+            debuggable false
+        }
+        debug {
+            shrinkResources false
+            minifyEnabled false
+//            signingConfig signingConfigs.debugConfig
+        }
+    }
+    sourceSets {
+        main {
+            def main_layouts = file('src/main/res/layouts').listFiles()
+            res {
+                srcDirs 'src/main/res', main_layouts
+            }
+            java {
+                srcDirs 'src/main/java','src/main/kotlin'
+                filter.exclude '**/*TODO*'
+            }
+        }
+        debug {
+            res {
+                srcDirs 'src/build_type/debug/res'
+            }
+            java {
+                srcDirs 'src/build_type/debug/java','src/build_type/debug/kotlin'
+            }
+        }
+        release {
+            res {
+                srcDirs 'src/build_type/release/res'
+            }
+            java {
+                srcDirs 'src/build_type/release/java','src/build_type/release/kotlin'
+            }
+        }
+    }
+}
+configurations {
+    all*.exclude group: 'com.google.firebase', module: 'firebase-common'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-core'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-auth'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-database'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-storage'
+    all*.exclude group: 'com.google.firebase', module: 'firebase-analytics'
+    all*.exclude group: 'com.google.android.gms', module: 'play-services-ads'
+    all*.exclude group: 'com.applovin', module: 'applovin-sdk'
+//    all*.exclude group: 'com.applovin.mediation', module: 'google-adapter'
+//    all*.exclude group: 'com.applovin.mediation', module: 'facebook-adapter'
+}
+dependencies {
+    api project(':lib_java_android')
+    implementation 'androidx.core:core-ktx:1.7.0'
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    implementation "androidx.room:room-ktx:2.4.2"
+    kapt "androidx.room:room-compiler:2.4.2"
+
+    implementation 'com.android.billingclient:billing:4.1.0'
+
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.9.0'){
+        exclude group: 'glide-parent'
+    }
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+}
+tezov {
+    debug {
+        enable = false //NOW Always check before release!!!!
+        keepSourceFile = true
+        keepLog = true
+        repackage = false
+        obfuscate = false
+    }
+    release{
+        obfuscate = true //NOW Always check before release!!!!
+    }
+    configuration {
+        applicationId = 'com.tezov.gofo'
+        proguardPaths = ['proguard-rules-app.pro']
+    }
+    version {
+        major = 1
+        minor = 0
+        patch = 2
+    }
+}
+tezov.beforeVariant { buildType ->
+    def billing_sku_no_ads = null
+    def build = null
+    if(buildType == DEBUG){
+        build = android.buildTypes.debug
+        //<SAMPLE SKU>
+        def SKU_TEST_FAKE = "android.test.fake"
+        def SKU_TEST_PURCHASE = "android.test.purchase"
+        def SKU_TEST_PURCHASED = "android.test.purchased"
+        def SKU_TEST_CANCELED = "android.test.canceled"
+        def SKU_TEST_REFUNDED = "android.test.refunded"
+        def SKU_TEST_UNAVAILABLE = "android.test.item_unavailable"
+        //</SAMPLE SKU>
+        billing_sku_no_ads = SKU_TEST_PURCHASE
+    }
+    else if(buildType == RELEASE){
+        build = android.buildTypes.release
+        //<SAMPLE SKU>
+        billing_sku_no_ads = "no_ads"
+    }
+
+    build.resValue "string", "application_version", tezov.version.name.get()
+    build.manifestPlaceholders += [application_id: tezov.configuration.applicationId.get()]
+    build.manifestPlaceholders += [package_name: buildType.getPackageName(project)]
+
+    build.resValue "string", "billing_sku_no_ads", billing_sku_no_ads
+}

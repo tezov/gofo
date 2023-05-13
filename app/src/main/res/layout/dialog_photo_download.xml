@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_modal_bg"
+    android:padding="?attr/dimPaddingRoot_3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_author"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            tools:background="@color/LightGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+            android:id="@+id/lbl_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/styleTextBig"
+            android:layout_marginStart="@dimen/dimPaddingElement_6"
+            android:background="@null"
+            app:scroll_position="start"
+            app:layout_constraintStart_toEndOf="@+id/img_author"
+            app:layout_constraintEnd_toStartOf="@+id/btn_download"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Author name" />
+
+        <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+            android:id="@+id/btn_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/StyleButtonFlatIconTranslucide"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:icon="@drawable/ic_download_24dp"
+            app:iconSize="28dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tezov.lib_java_android.ui.layout.FrameLayout
+        android:id="@+id/sep_header"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="?attr/colorAccentLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_header"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <com.tezov.lib_java_android.ui.layout.ScrollViewVertical
+        android:id="@+id/container_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/container_btn"
+        app:layout_constraintTop_toBottomOf="@+id/sep_header"
+        tools:background="@color/LightBlue">
+
+        <com.tezov.lib_java_android.ui.layout.ConstraintLayout
+            android:id="@+id/container_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingStart="@dimen/dimPaddingElement_6"
+                android:paddingEnd="@dimen/dimPaddingElement_6"
+                android:textAppearance="?attr/styleTextLabelSmall"
+                android:background="@drawable/lbl_photo_size"
+                android:elevation="1dp"
+                tools:text="1024x748"/>
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                tools:layout_height="200dp"
+                android:background="?attr/colorFaintDark"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/img_photo"
+                android:textAppearance="?attr/styleTextNorm"
+                android:layout_marginTop="@dimen/dimPaddingElement_6"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="description"/>
+
+
+        </com.tezov.lib_java_android.ui.layout.ConstraintLayout>
+    </com.tezov.lib_java_android.ui.layout.ScrollViewVertical>
+
+</com.tezov.lib_java_android.ui.layout.ConstraintLayout>

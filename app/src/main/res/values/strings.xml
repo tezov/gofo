@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_email" translatable="false">tezov.app@gmail.com</string>
+
+    <string name="activity_privacy_policy_title">Privacy Policy</string>
+    <string name="activity_preference_title">Preferences</string>
+    <string name="frg_search_title">Search</string>
+    <string name="frg_random_title">Random</string>
+    <string name="frg_feed_title">Feed</string>
+
+    <string name="menu_feed">Feed</string>
+    <string name="menu_random">Random</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_filter">Filter</string>
+
+    <string name="pref_contact">Contact</string>
+    <string name="pref_privacy_policy">Privacy Policy</string>
+
+    <string name="pref_sku_no_ads_buy_full_version_title">Buy no ads version?</string>
+    <string name="pref_sku_no_ads_buy_full_version_summary">show that you like this application</string>
+
+    <string name="pref_sku_no_ads_owned_title">No ads version unlocked</string>
+    <string name="pref_sku_no_ads_owned_summary">thanks for your support</string>
+
+    <string name="pref_app_version_title">Application version</string>
+
+    <string name="pref_app_rating_title">Give a review?</string>
+    <string name="pref_app_rating_summary">leave us your review and let other users how you feel about this application</string>
+
+    <string name="pref_app_share_title">Share application</string>
+    <string name="pref_app_share_summary">share application with a friend? send a direct link to download this application</string>
+
+    <string name="pref_destination_directory_title">Destination directory</string>
+    <string name="pref_destination_directory_android_summary">output files will be placed in one of android media directory Pictures</string>
+    <string name="pref_destination_directory_summary">files will be placed in the directory -> %s</string>
+
+    <string name="lbl_banner_default">Buy the no ads version ;)</string>
+    <string name="btn_maybe_later">Maybe Later</string>
+    <string name="btn_buy">Buy</string>
+    <string name="chk_do_not_show_again">do not show again</string>
+    <string name="btn_ok">Ok</string>
+    <string name="chk_already_done">already done</string>
+
+    <string name="lbl_billing_error">Failed to complete purchase</string>
+
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm">Confirm</string>
+
+    <string name="lbl_dialog_filter_title">Filter</string>
+    <string name="frm_inner_tag">tags</string>
+    <string name="frm_outer_tag">Tags</string>
+
+    <string name="frm_inner_width">width</string>
+    <string name="frm_outer_width">Width</string>
+
+    <string name="frm_inner_height">height</string>
+    <string name="frm_outer_height">Height</string>
+
+    <string name="lbl_photo">Photo:</string>
+    <string name="btn_profile">open profile</string>
+
+    <string name="transfer_max" translatable="false">100</string>
+    <string name="transfer_unit" translatable="false">%</string>
+    <string name="transfer_sep" translatable="false">/</string>
+
+    <string name="lbl_result_progressing">progressing…</string>
+    <string name="lbl_exception_download">failed to download</string>
+    <string name="lbl_exception_limit_api">limit api reached</string>
+    <string name="lbl_exception_response">response api error</string>
+    <string name="lbl_exception_http_failed">connexion failed</string>
+
+    <string name="lbl_download_photo_title">Download photo</string>
+
+    <string name="lbl_tags_title">:: Tags ----</string>
+    <string name="spn_orientation_title">:: Orientation ----</string>
+    <string-array name="spn_orientation">
+        <item>---------</item>
+        <item>LANDSCAPE</item>
+        <item>PORTRAIT</item>
+        <item>SQUARISH</item>
+    </string-array>
+    <string name="spn_order_title">:: Order ----</string>
+    <string-array name="spn_order_search">
+        <item>RELEVANT</item>
+        <item>LATEST</item>
+    </string-array>
+    <string-array name="spn_order_feed">
+        <item>LATEST</item>
+        <item>OLDEST</item>
+        <item>POPULAR</item>
+    </string-array>
+    <string name="spn_color_title">:: Color ----</string>
+    <string-array name="spn_color">
+        <item>---------</item>
+        <item>BLACK</item>
+        <item>WHITE</item>
+        <item>BLACK_AND_WHITE</item>
+        <item>YELLOW</item>
+        <item>ORANGE</item>
+        <item>RED</item>
+        <item>PURPLE</item>
+        <item>MAGENTA</item>
+        <item>GREEN</item>
+        <item>TEAL</item>
+        <item>BLUE</item>
+    </string-array>
+
+</resources>

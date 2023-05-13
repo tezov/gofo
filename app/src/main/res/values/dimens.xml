@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="lbl_size_max_txt_banner_default">18sp</dimen>
+    <dimen name="lbl_size_max_txt_toolbar_default">24sp</dimen>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!--REMOTE VIEW -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ProgressBar
+        android:id="@+id/bar_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_progress"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="4dp"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_progress_sep"
+        tools:text="1234" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_progress_sep"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="4dp"
+        android:paddingEnd="2dp"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_progress_max"
+        tools:text="/" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_progress_max"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingEnd="2dp"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/lbl_progress_unit"
+        tools:text="1234" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_progress_unit"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="unit" />
+
+
+</merge>

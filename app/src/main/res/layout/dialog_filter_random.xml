@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_tag_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:helperText="helper text"
+        tools:hint="Alias">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_tag"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionNext"
+            app:auto_hide_keyboard="false"
+            app:hint_inner="@string/frm_inner_tag"
+            app:hint_outer="@string/frm_outer_tag"
+            app:icon_mode="clear"
+            tools:text="alias" />
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_tags_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="?attr/dimPaddingElement_6"
+        android:text="@string/lbl_tags_title"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toEndOf="@+id/btn_delete_tags"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_delete_tags"/>
+
+    <com.tezov.lib_java_android.ui.component.plain.ButtonIconMaterial
+        android:id="@+id/btn_delete_tags"
+        style="@style/StyleGofoButtonFlatIconRoundSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        app:icon="@drawable/ic_delete_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frm_tag_layout" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/lbl_tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintHeight_min="38dp"
+        tools:layout_height="80dp"
+        android:background="@drawable/edittext_area_tags_bg"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete_tags"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:alignItems="baseline"
+        app:justifyContent="flex_start"
+        app:alignContent="flex_start"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/spn_orientation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="?attr/dimPaddingElement_4"
+        android:paddingStart="?attr/dimPaddingElement_4"
+        android:text="@string/spn_orientation_title"
+        android:textAppearance="?attr/styleTextLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_tags" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spn_orientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/spn_orientation"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="?attr/dimPaddingElement_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spn_orientation_title" />
+
+</merge>
+
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <com.tezov.lib_java_android.ui.component.plain.FocusCemetery
+        android:layout_width="1px"
+        android:layout_height="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_width_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_password_keystore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:helperText="helper text"
+        tools:hint="width">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_width"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingStart="@dimen/dimPaddingElement_4"
+            app:hint_inner="@string/frm_inner_width"
+            app:hint_outer="@string/frm_outer_width"
+            app:icon_mode="action"
+            app:icon="@drawable/ic_size_full_24dp"/>
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+    <com.tezov.lib_java_android.ui.component.plain.EditTextLayout
+        android:id="@+id/frm_height_layout"
+        style="?attr/textInputLayoutStyle"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:theme="?attr/textInputTheme"
+        app:errorIconDrawable="@null"
+        app:layout_constraintTop_toBottomOf="@+id/frm_width_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:helperText="helper text"
+        tools:hint="height">
+
+        <com.tezov.lib_java_android.ui.form.component.plain.FormEditText
+            android:id="@+id/frm_height"
+            style="?attr/textInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:paddingStart="@dimen/dimPaddingElement_4"
+            app:hint_inner="@string/frm_inner_height"
+            app:hint_outer="@string/frm_outer_height"
+            app:icon_mode="action"
+            app:icon="@drawable/ic_size_full_24dp"/>
+    </com.tezov.lib_java_android.ui.component.plain.EditTextLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/brr_frm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="frm_width_layout,frm_height_layout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_keep_ratio"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/dimPaddingElement_4"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:background="@drawable/btn_size_ratio_lock"
+        app:layout_constraintStart_toEndOf="@+id/brr_frm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</merge>

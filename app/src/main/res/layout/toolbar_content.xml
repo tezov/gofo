@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/ThemeToolbar"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:id="@+id/img_icon"
+        android:layout_width="?android:attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/ic_launcher_foreground"
+        android:scaleX="1.5"
+        android:scaleY="1.5"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_name"
+        style="?attr/styleTextBig"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="?attr/dimPaddingElement_6"
+        android:maxLines="1"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="@dimen/lbl_size_max_txt_toolbar_default"
+        android:gravity="center_vertical"
+        android:textColor="@color/White"
+        tools:text="lbl_name" />
+</LinearLayout>
+

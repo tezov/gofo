@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="false">
+        <layer-list>
+            <item android:start="1dp" android:end="1dp">
+                <shape>
+                    <gradient android:angle="90" android:endColor="#80B3BBCC" android:startColor="#80E8EBEF" android:type="linear" />
+                    <stroke android:width="1dp" android:color="#000000" />
+                    <corners android:radius="4dp" />
+                    <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_lock_open_24dp"></item>
+        </layer-list>
+    </item>
+    <item android:state_activated="true">
+        <layer-list>
+            <item android:start="1dp" android:end="1dp">
+                <shape>
+                    <gradient android:angle="-90" android:endColor="#8000FF00" android:startColor="#8077EB77" android:type="linear" />
+                    <stroke android:width="1dp" android:color="#000000" />
+                    <corners android:radius="4dp" />
+                    <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_lock_close_24dp"></item>
+        </layer-list>
+    </item>
+</selector>
+

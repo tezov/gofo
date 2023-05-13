@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tezov.lib_java_android.ui.layout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/debug_layout"
+        app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/tpl_activity_tbc_tbba_overlap_fade" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/debug_layout"
+        layout="@layout/debug_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</com.tezov.lib_java_android.ui.layout.ConstraintLayout>

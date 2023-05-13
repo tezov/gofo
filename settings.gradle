@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+rootProject.name = "Gofo"
+include ':app', ':lib_java', ':lib_java_android'
+includeBuild '../plugin_TezovApp'
+project(':lib_java').projectDir = new File(settingsDir, '../lib_java/lib')
+project(':lib_java_android').projectDir = new File(settingsDir, '../lib_java_android/lib')

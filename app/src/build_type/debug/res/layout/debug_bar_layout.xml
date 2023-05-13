@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/debug_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.tezov.lib_java_android.debug.debugBar.DebugBarScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <misc.DebugBarButtonLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_log_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log filter" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_log_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log photo" />
+
+            </misc.DebugBarButtonLayout>
+
+            <misc.DebugBarButtonLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_toggle_log_visibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Toggle Log\nvisibility" />
+
+                <LinearLayout
+                    android:id="@+id/mn_config_trackclass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_border_line_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="?attr/styleTextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="DebugTrack" />
+
+                    <com.tezov.lib_java_android.ui.component.plain.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mn_config_toggle_exception"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_border_line_selector"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="?attr/styleTextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Exception" />
+
+                    <com.tezov.lib_java_android.ui.component.plain.Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_enum_base"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log \nEnum" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_debug_track_memory_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Memory size" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_debug_track_created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log \nCreated" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_debug_track_memory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log \nmemory" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_debug_track_memory_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log \nMemory List" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_navigation_stack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log \nNavigation" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/mn_singleton_memory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Log \nSingleton" />
+
+            </misc.DebugBarButtonLayout>
+
+        </LinearLayout>
+
+    </com.tezov.lib_java_android.debug.debugBar.DebugBarScrollView>
+
+    <com.tezov.lib_java_android.debug.debugBar.DebugBarLogLayout
+        android:id="@+id/debug_log"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+</LinearLayout>
+

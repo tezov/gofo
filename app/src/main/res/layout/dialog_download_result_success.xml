@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="?attr/dimPaddingRoot_4">
+
+    <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+        android:id="@+id/lbl_folder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Null"
+        android:drawableStart="@drawable/ic_directory_24dp"
+        android:maxLines="1"
+        android:padding="?attr/dimPaddingElement_4"
+        android:textAppearance="?attr/styleTextNorm"
+        tools:text="folder name" />
+
+    <com.tezov.lib_java_android.ui.component.plain.TextViewScrollable
+        android:id="@+id/lbl_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Null"
+        android:drawableStart="@drawable/ic_file_24dp"
+        android:maxLines="1"
+        android:padding="?attr/dimPaddingElement_4"
+        android:textAppearance="?attr/styleTextNorm"
+        tools:text="file name" />
+
+</LinearLayout>

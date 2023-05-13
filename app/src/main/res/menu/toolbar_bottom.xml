@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/tpl_activity_drawer_toolbars_collapsible">
+
+    <item
+        android:id="@+id/mn_fragment_feed"
+        android:icon="@drawable/ic_feed_24dp"
+        android:title="@string/menu_feed" />
+    <item
+        android:id="@+id/mn_fragment_random"
+        android:icon="@drawable/ic_random_24dp"
+        android:title="@string/menu_random"/>
+    <item
+        android:id="@+id/mn_fragment_search"
+        android:icon="@drawable/ic_search_24dp"
+        android:title="@string/menu_search" />
+
+</menu>
+

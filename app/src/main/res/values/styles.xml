@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- THEME -->
+    <style name="ThemeApplication" parent="ThemeNoActionBarLight">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryLight</item>
+        <item name="colorSecondaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccentLight">@color/colorAccentLight</item>
+        <item name="colorFaint">@color/colorFaint</item>
+        <item name="colorFaintDark">@color/colorFaintDark</item>
+        <item name="colorError">@color/colorError</item>
+
+        <item name="colorText">@drawable/state_text_color</item>
+        <item name="android:textColor">@drawable/state_text_color</item>
+        <item name="colorHint">@color/colorHint</item>
+        <item name="android:textColorHint">@color/colorHint</item>
+
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorBackground">@color/colorBackground</item>
+
+        <item name="navigationToolbarTheme">@style/ThemeBootiToolbarBottom</item>
+
+    </style>
+
+    <style name="ThemeBootiToolbarBottom" parent="ThemeToolbarBottom">
+        <item name="itemIconTint">@drawable/toolbar_bottom_color</item>
+        <item name="itemTextColor">@drawable/toolbar_bottom_color</item>
+        <item name="itemTextAppearanceActive">?attr/styleTextNorm</item>
+        <item name="itemTextAppearanceInactive">?attr/styleTextNorm</item>
+    </style>
+
+    <style name="StyleGofoButtonFlatIconRoundSmall" parent="StyleButtonFlatIconBase">
+        <item name="iconSize">30dp</item>
+        <item name="android:minWidth">36dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingStart">3dp</item>
+        <item name="android:background">@drawable/button_border_round_small</item>
+    </style>
+
+    <style name="StyleGofoButtonTextViewEnd" parent="StyleButtonFlatIconBase">
+        <item name="iconSize">16dp</item>
+        <item name="android:minWidth">20dp</item>
+        <item name="android:minHeight">20dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingStart">2dp</item>
+        <item name="android:background">@drawable/button_textview_left</item>
+    </style>
+
+</resources>

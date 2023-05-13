@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="activity_privacy_policy_title">Politique de Confidentialité</string>
+    <string name="activity_preference_title">Préférences</string>
+    <string name="frg_search_title">Recherche</string>
+    <string name="frg_random_title">Random</string>
+    <string name="frg_feed_title">Feed</string>
+
+    <string name="menu_feed">News</string>
+    <string name="menu_random">Aléatoire</string>
+    <string name="menu_search">Recherche</string>
+    <string name="menu_filter">Filtre</string>
+
+    <string name="pref_privacy_policy">Politique de Confidentialité</string>
+    <string name="pref_contact">Contact</string>
+
+    <string name="pref_sku_no_ads_buy_full_version_title">Acheter la version sans publicités?</string>
+    <string name="pref_sku_no_ads_buy_full_version_summary">montrez que vous aimez cet app :)</string>
+
+    <string name="pref_sku_no_ads_owned_title">Version sans publicités débloquée.</string>
+    <string name="pref_sku_no_ads_owned_summary">Merci pour votre soutient</string>
+
+    <string name="pref_app_version_title">Application version</string>
+
+    <string name="pref_app_rating_title">Donner votre avis?</string>
+    <string name="pref_app_rating_summary">laisser nous votre avis and informer les autres utilisateurs de vos sentiments concernant cette application</string>
+
+    <string name="pref_app_share_title">Partager application</string>
+    <string name="pref_app_share_summary">partager application avec un ami? envoyer un lien direct pour télécharger cette application</string>
+
+    <string name="pref_destination_directory_title">Dossier de destination</string>
+    <string name="pref_destination_directory_android_summary">les fichiers seront placés dans le dossier d\'android media Pictures</string>
+    <string name="pref_destination_directory_summary">les fichiers seront placés dans le dossier -> %s</string>
+
+    <!--    DIALOG SUGGEST BUY -->
+    <string name="lbl_banner_default">Achetez la version sans publicités ;)</string>
+    <string name="btn_maybe_later">Plus tard</string>
+    <string name="btn_buy">Acheter</string>
+    <string name="chk_do_not_show_again">Ne plus montrer</string>
+    <string name="btn_ok">Ok</string>
+    <string name="chk_already_done">already done</string>
+
+    <string name="lbl_billing_error">Achat interrompu</string>
+
+    <string name="btn_cancel" >Annuler</string>
+    <string name="btn_confirm" >Confirmer</string>
+
+    <string name="lbl_dialog_filter_title">Filtrer</string>
+    <string name="frm_inner_tag">tags</string>
+    <string name="frm_outer_tag">Tags</string>
+
+    <string name="frm_inner_width">largeur</string>
+    <string name="frm_outer_width">Largeur</string>
+
+    <string name="frm_inner_height">hauteur</string>
+    <string name="frm_outer_height">Hauteur</string>
+
+    <string name="lbl_photo">Photo:</string>
+    <string name="btn_profile">ouvrir profile</string>
+
+    <string name="lbl_result_progressing">progressing…</string>
+    <string name="lbl_exception_download">téléchargement échec</string>
+
+    <string name="lbl_exception_limit_api">limit api atteinte</string>
+    <string name="lbl_exception_response">réponse api erreur</string>
+    <string name="lbl_exception_http_failed">connection échec</string>
+
+    <string name="lbl_download_photo_title">Téléchargement photo</string>
+
+    <string name="lbl_tags_title">:: Tags ----</string>
+    <string name="spn_orientation_title">:: Orientation ----</string>
+
+    <string-array name="spn_orientation">
+        <item>---------</item>
+        <item>PAYSAGE</item>
+        <item>PORTRAIT</item>
+        <item>CARRÉE</item>
+    </string-array>
+    <string name="spn_order_title">:: Ordre ----</string>
+    <string-array name="spn_order_search">
+        <item>PERTINENT</item>
+        <item>RÉCENT</item>
+    </string-array>
+    <string-array name="spn_order_feed">
+        <item>RÉCENT</item>
+        <item>ANCIEN</item>
+        <item>POPULAIRE</item>
+    </string-array>
+    <string name="spn_color_title">:: Couleur ----</string>
+    <string-array name="spn_color">
+        <item>---------</item>
+        <item>NOIR</item>
+        <item>BLANC</item>
+        <item>NOIR ET BLANC</item>
+        <item>JAUNE</item>
+        <item>ORANGE</item>
+        <item>ROUGE</item>
+        <item>VIOLET</item>
+        <item>MAGENTA</item>
+        <item>VERT</item>
+        <item>SARCELLE</item>
+        <item>BLEU</item>
+    </string-array>
+
+</resources>

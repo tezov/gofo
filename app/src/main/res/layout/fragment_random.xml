@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tezov.lib_java_android.ui.layout.ScrollViewVertical xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="?attr/dimBorder_4"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:paddingEnd="?attr/dimBorder_4"
+    android:paddingBottom="?attr/dimBorder_4"
+    android:fillViewport="true">
+
+
+</com.tezov.lib_java_android.ui.layout.ScrollViewVertical>

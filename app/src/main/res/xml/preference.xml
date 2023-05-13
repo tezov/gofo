@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tezov.lib_java_android.ui.component.preference.Preference android:id="@+id/pref_sku_no_ads" />
+    <com.tezov.lib_java_android.ui.component.preference.Preference
+        android:id="@+id/pref_app_rating"
+        android:icon="@drawable/ic_rating_24dp"
+        android:summary="@string/pref_app_rating_summary"
+        android:title="@string/pref_app_rating_title"
+        app:isPreferenceVisible="false" />
+    <com.tezov.lib_java_android.ui.component.preference.Preference
+        android:id="@+id/pref_app_share"
+        android:icon="@drawable/ic_share_24dp"
+        android:summary="@string/pref_app_share_summary"
+        android:title="@string/pref_app_share_title" />
+    <com.tezov.lib_java_android.ui.component.preference.DirectoryPreference
+        android:id="@+id/pref_destination_directory"
+        android:icon="@drawable/ic_directory_24dp"
+        android:title="@string/pref_destination_directory_title" />
+    <PreferenceCategory android:layout="@layout/preference_layout_null">
+        <com.tezov.lib_java_android.ui.component.preference.Preference
+            android:id="@+id/pref_app_version"
+            android:selectable="false"
+            android:title="@string/pref_app_version_title"
+            app:enableCopying="true" />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>
