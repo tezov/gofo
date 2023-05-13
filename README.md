@@ -19,3 +19,12 @@ This project use an Unplash free API key with a REST API. I didn't hide it, you 
 - sync and build.
 
 If you don't understand the folder strutures you need to comply, look the crypter project first [crypter](https://github.com/tezov/crypter_and_lib).
+
+
+## What's powerfull in there ?
+
+This file is what's make everythiing possible:
+
+https://github.com/tezov/gofo/blob/master/app/src/main/kotlin/com/tezov/lib/adapterJavaToKotlin/async/IteratorBufferAsync_K.kt
+
+Like I said, it is a crazy mix Java / Kotlin with thread safe, but this little guy can find food and dispatch them without any mistake making the recycler view hyper responsive.
