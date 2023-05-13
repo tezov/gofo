@@ -6,7 +6,7 @@ https://play.google.com/store/apps/details?id=com.tezov.gofo.rse&hl=en&gl=US
 
 This project has been done with the same lib than Crypter. 
 
-This project is a mix up of Java / kotlin with a crazy attempt to bridge my lib and a half part of coroutine and multi-thread in Java. This is code everything you should not do. But add the end, I obtain a very successful recycler view with load on the fly.
+This project is a mix up of Java / kotlin with a crazy attempt to bridge my lib and a half part of coroutine and multi-thread in Java. This is code everything you should not do. But at the end, I obtain a very successful recycler view with load on the fly.
 
 This project use an Unplash free API key with a REST API. I didn't hide it, you find it in the source. therefore, the free api is limmited, so if you are overtesting this app, go retry an API key yourself.
 
