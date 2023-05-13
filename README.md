@@ -28,12 +28,3 @@ This file is what's make everythiing possible:
 https://github.com/tezov/gofo/blob/master/app/src/main/kotlin/com/tezov/lib/adapterJavaToKotlin/async/IteratorBufferAsync_K.kt
 
 Like I said, it is a crazy mix Java / Kotlin with thread safe, but this little guy can find food and dispatch them without any mistake making the recycler view hyper responsive.
-
-
-## What's powerful in there ?
-
-This file is what's make everythiing possible:
-
-https://github.com/tezov/gofo/blob/master/app/src/main/kotlin/com/tezov/lib/adapterJavaToKotlin/async/IteratorBufferAsync_K.kt
-
-Like I said, it is a crazy mix Java / Kotlin with thread safe, but this little guy can find food and dispatch them without any mistake making the recycler view hyper responsive.
