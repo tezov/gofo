@@ -32,4 +32,8 @@ Like I said, it is a crazy mix Java / Kotlin with thread safe, but this little g
 
 ## What's powerful in there ?
 
-I thing nothing. That's just a good example that show how to user the socket package from my java lib.
+This file is what's make everythiing possible:
+
+https://github.com/tezov/gofo/blob/master/app/src/main/kotlin/com/tezov/lib/adapterJavaToKotlin/async/IteratorBufferAsync_K.kt
+
+Like I said, it is a crazy mix Java / Kotlin with thread safe, but this little guy can find food and dispatch them without any mistake making the recycler view hyper responsive.
